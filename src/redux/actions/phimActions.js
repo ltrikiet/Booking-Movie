@@ -17,7 +17,6 @@ export const getListPhim = () => {
     axiosClient
       .get(`QuanLyPhim/LayDanhSachPhim?maNhom=${maNhom}`)
       .then((result) => {
-        console.log(result.data);
         dispatch({
           type: GET_LIST_PHIM.SUCCESS,
           payload: { data: result.data },
