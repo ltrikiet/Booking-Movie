@@ -3,6 +3,7 @@ import { Route } from "react-router-dom";
 import HomeTemplate from "../HomeTemplate";
 const HomeRoute = (props) => {
   const { component: Component, ...rest } = props;
+
   return (
     <Route
       {...rest}

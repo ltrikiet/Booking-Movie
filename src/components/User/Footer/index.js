@@ -54,7 +54,7 @@ export default function Footer() {
   return (
     <footer className="footer bg-dark">
       <RBootstrap.Container>
-        <div className="footer-top">
+        {/* <div className="footer-top">
           <RBootstrap.Row>
             <RBootstrap.Col md={4} className="tix d-none d-md-block">
               <p className="footer-title tix-title">TIX</p>
@@ -96,11 +96,11 @@ export default function Footer() {
               </div>
             </RBootstrap.Col>
           </RBootstrap.Row>
-        </div>
+        </div> */}
         <hr />
         <div className="footer-bottom">
           <div className="row">
-            <RBootstrap.Col md={2} className="zion">
+            {/* <RBootstrap.Col md={2} className="zion">
               <img src="/img/zion-logo.jpg" alt="zion-logo" />
             </RBootstrap.Col>
             <RBootstrap.Col md={8} className="company-introduce">
@@ -126,8 +126,14 @@ export default function Footer() {
                 src="/img/d1e6bd560daa9e20131ea8a0f62e87f8.png"
                 alt="bocongthuong-logo"
               />
-            </RBootstrap.Col>
+            </RBootstrap.Col> */}
           </div>
+          <p
+            className="text-center"
+            style={{ fontSize: "30px", fontWeight: "bold" }}
+          >
+            Website này bản thân tôi làm để học ReactJS ở Cybersoft
+          </p>
         </div>
       </RBootstrap.Container>
     </footer>

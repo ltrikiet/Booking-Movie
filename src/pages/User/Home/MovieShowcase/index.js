@@ -15,7 +15,7 @@ export default function MovieShowcase(props) {
             <MovieShowcaseCarousel history={history} />
           </RBootstrap.Tab>
           <RBootstrap.Tab eventKey="sap-chieu" title="Sắp chiếu">
-            DEF
+            <MovieShowcaseCarousel history={history} />
           </RBootstrap.Tab>
         </RBootstrap.Tabs>
       </RBootstrap.Container>
