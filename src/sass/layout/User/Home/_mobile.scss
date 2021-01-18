@@ -1,0 +1,86 @@
+$mobile-width: 230px;
+$mobile-height: 470px;
+
+.mobile {
+  margin-top: 50px;
+  min-height: 600px;
+  .mobile-content,
+  .mobile-simulator {
+    margin: 11% 0;
+    display: flex;
+  }
+  .mobile-content {
+    color: getColor("white");
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    @include Responsive("SM") {
+      text-align: left;
+    }
+    p {
+      margin: 0;
+    }
+    .mobile-title {
+      font-size: 35px;
+      font-weight: 500;
+    }
+    .mobile-info {
+      font-size: 18px;
+      margin: 25px 0;
+    }
+    .btn-download {
+      background-color: getColor("orange");
+      border: 1px solid getColor("orange");
+      font-weight: 500;
+      width: 60%;
+      padding: 10px 25px;
+      margin: 0 auto;
+      @include Responsive(SM) {
+        margin: 0;
+      }
+      &:focus {
+        background-color: getColor("orange");
+        border: 1px solid getColor("orange");
+        outline: none;
+      }
+    }
+    .mobile-download {
+      margin-top: 7px;
+
+      a {
+        color: getColor("white");
+        text-decoration: underline;
+      }
+    }
+  }
+  .mobile-simulator {
+    position: relative;
+    justify-content: center;
+    .mobile-background {
+      width: $mobile-width;
+      height: $mobile-height;
+      overflow: hidden;
+      display: block;
+    }
+    .mobile-slide {
+      transform: scale(0.945);
+      position: absolute;
+      top: 0;
+      width: $mobile-width;
+      overflow: hidden;
+      border-radius: 23px;
+      .carousel-inner {
+        width: $mobile-width;
+        .carousel-item {
+          width: $mobile-width;
+          overflow: hidden;
+          img {
+            width: $mobile-width !important;
+            height: $mobile-height !important;
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}

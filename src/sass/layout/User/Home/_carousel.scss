@@ -1,0 +1,50 @@
+.home-carousel {
+  padding-top: 60px;
+  position: relative;
+  min-height: 510px;
+  .carousel {
+    min-height: 450px;
+    cursor: pointer;
+    .carousel-indicators {
+      margin-bottom: 50px;
+      li {
+        height: 18px;
+        width: 18px;
+        border-radius: 50%;
+        margin: 0 8px;
+        opacity: 1;
+        background-color: getColor("grey");
+        &.active {
+          background-color: getColor("orange");
+        }
+      }
+    }
+
+    .carousel-inner {
+      .carousel-item {
+        .movie-carousel-img {
+          height: 450px;
+        }
+      }
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+      top: 50%;
+      bottom: 50%;
+      i {
+        color: getColor("grey");
+        transform: scale(3);
+      }
+    }
+  }
+  .movie-trailer {
+    opacity: 0;
+    transition: all 0.5s;
+  }
+  &:hover {
+    .movie-trailer {
+      opacity: 1;
+    }
+  }
+}

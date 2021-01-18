@@ -1,0 +1,175 @@
+$height: 600px;
+$border-radius: 5px;
+
+.cinema {
+  padding-top: 60px;
+  min-height: 662px;
+  position: relative;
+  .nav {
+    min-height: $height;
+    .nav-item {
+      &::after {
+        content: "";
+        display: block;
+        width: 70%;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        border-bottom: 1.5px solid getColor("lightGrey");
+      }
+      .nav-link {
+        padding-left: 0px;
+        padding-right: 0px;
+        color: getColor("black");
+        opacity: 0.4;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        &.active {
+          background-color: transparent;
+          opacity: 1;
+        }
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+  }
+
+  .cinema-logo {
+    border-left: 1px solid getColor("lightGrey");
+    border-top: 1px solid getColor("lightGrey");
+    border-bottom: 1px solid getColor("lightGrey");
+    border-radius: $border-radius 0 0 $border-radius;
+    max-width: 12%;
+    min-height: $height;
+    .nav-item {
+      .nav-link {
+        text-align: center;
+        img {
+          display: inline-block;
+          width: 50px;
+          height: 50px;
+        }
+      }
+    }
+  }
+  .cinema-company-content {
+    border: 1px solid getColor("lightGrey");
+    border-radius: 0 $border-radius $border-radius 0;
+    max-width: 88%;
+    .cinema-content {
+      min-height: $height;
+      max-height: $height;
+      overflow: hidden;
+      &:hover {
+        overflow: auto;
+      }
+      .nav-item {
+        .nav-link {
+          display: flex;
+          align-items: center;
+          p {
+            margin: 0;
+          }
+          .cinema-img {
+            margin-right: 5px;
+            width: 50px;
+            height: 50px;
+            display: inline-block;
+          }
+          .cinema-info {
+            .cinema-name {
+              font-weight: 500;
+              font-size: 15px;
+              span {
+                color: getColor("orange");
+              }
+            }
+            .cinema-local,
+            .more-info {
+              font-size: 13px;
+            }
+            .cinema-local {
+              color: getColor("grey");
+            }
+            .more-info {
+              color: getColor("orange");
+            }
+          }
+        }
+      }
+    }
+    .movie-content {
+      overflow: auto;
+      min-height: $height;
+      max-height: $height;
+      border-left: 1px solid getColor("lightGrey");
+      border-radius: 0 $border-radius $border-radius 0;
+      .cinema-movie {
+        padding-top: 15px;
+        padding-bottom: 15px;
+        border-bottom: 1px solid getColor("lightGrey");
+        p {
+          margin: 0;
+        }
+        .cinema-movie-content {
+          display: flex;
+          align-items: center;
+          .movie-img {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            margin-right: 5px;
+          }
+          .movie-info {
+            .movie-name {
+              span {
+                font-weight: 600;
+                background-color: getColor("orange");
+                border-radius: 5px;
+                padding: 0 5px;
+                margin-right: 5px;
+                font-size: 14px;
+                display: inline-block;
+                color: getColor("white");
+              }
+              font-weight: 500;
+            }
+            .movie-times {
+              color: getColor("grey");
+              font-size: 13px;
+            }
+          }
+        }
+        .movie-version {
+          margin: 10px 0;
+          font-weight: 500;
+          font-size: 17px;
+        }
+        .movie-checkin {
+          button {
+            margin: 0 $border-radius $border-radius 0;
+            margin: 5px;
+            width: 140px;
+            border-radius: 10px;
+            background-color: rgba($color: getColor("lightGrey"), $alpha: 0.05);
+            color: getColor("grey");
+            font-size: 14px;
+            border: 1.5px solid getColor("grey");
+            span {
+              font-size: 18px;
+              font-weight: 500;
+              color: green;
+              transition: all 0.2s;
+            }
+            &:hover {
+              span {
+                color: getColor("orange");
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

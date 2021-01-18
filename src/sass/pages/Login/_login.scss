@@ -1,0 +1,116 @@
+.login-page {
+  background-image: url("/img/bg2.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  .login-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px 50px;
+    width: 100%;
+    height: 100%;
+    @include Responsive(XS) {
+      padding: 50px;
+      max-width: 360px;
+      max-height: 570px;
+    }
+    border-radius: 10px;
+    background-image: linear-gradient(
+      to bottom,
+      rgba(20, 50, 93, 0.9),
+      rgba(8, 22, 48, 0.9)
+    );
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.45);
+    .close {
+      position: absolute;
+      right: 15px;
+      top: 15px;
+      @include Responsive(MD) {
+        top: -15px;
+        right: -15px;
+      }
+      padding: 10px;
+      opacity: 1;
+      background-color: rgba(8, 22, 48, 0.9);
+      border-radius: 50%;
+
+      span {
+        display: block;
+        text-align: center;
+        line-height: 0.8;
+        text-shadow: none;
+        margin-top: -5px;
+        color: getColor("white");
+      }
+    }
+    .logo-img {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 30px;
+      img {
+        width: 200px;
+      }
+    }
+    .login-form {
+      input {
+        text-align: center;
+      }
+      .dang-ky {
+        cursor: pointer;
+        margin-bottom: 0;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  .register-content {
+    h3 {
+      padding: 0px;
+      @include Responsive(MD) {
+        padding-top: 40px;
+      }
+    }
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    @include Responsive(XS) {
+      padding: 50px;
+      width: 75vw;
+      max-height: 550px;
+    }
+    @include Responsive(SM) {
+      padding-top: 10px;
+      width: 60vw;
+      max-height: 490px;
+    }
+
+    background-image: linear-gradient(
+      to bottom,
+      rgba(20, 50, 93, 0.9),
+      rgba(8, 22, 48, 0.9)
+    );
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.45);
+    .register-form {
+      .btn-dangky {
+        button {
+          width: 30vw;
+          @include Responsive(XS) {
+            width: 15vw;
+          }
+          height: 50px;
+        }
+      }
+    }
+  }
+}

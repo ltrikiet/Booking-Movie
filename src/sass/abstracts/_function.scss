@@ -1,0 +1,13 @@
+@function getColor($color) {
+  @if map-has-key($map: $colors, $key: $color) {
+    @return map-get($map: $colors, $key: $color);
+  }
+  @return "";
+}
+
+@function getFS($fs) {
+  @if map-has-key($map: $fontsizes, $key: $fs) {
+    @return map-get($map: $fontsizes, $key: $fs);
+  }
+  @return "";
+}

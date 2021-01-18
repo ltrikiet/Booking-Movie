@@ -1,0 +1,413 @@
+.detail {
+  padding-top: 60px;
+  background-color: rgb(10, 32, 41);
+  position: relative;
+  min-height: 46.8vh;
+  .detail-background {
+    position: absolute;
+    width: 100%;
+    -webkit-filter: blur(10px);
+    filter: blur(10px);
+    min-height: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .movie-top {
+    margin: 100px 0;
+    .left {
+      width: 70vw;
+      display: flex;
+      align-items: center;
+      .movie-img {
+        position: relative;
+        img {
+          margin-right: 10px;
+          width: 220px;
+          height: 300px;
+          display: block;
+        }
+        .movie-trailer {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          background-color: transparent;
+          border: none;
+          opacity: 0;
+          transition: all 0.4s;
+          img {
+            transition: all 0.5s;
+            margin: 0;
+            width: 60px;
+            height: 60px;
+          }
+        }
+        &:hover {
+          .movie-trailer {
+            opacity: 1;
+          }
+        }
+      }
+      .movie-info {
+        p {
+          color: getColor("white");
+          margin: 0;
+          font-weight: 500;
+        }
+        .movie-premiere-time {
+          font-size: 14px;
+        }
+        .movie-name {
+          font-size: 25px;
+          span {
+            margin-right: 5px;
+            border-radius: 5px;
+            text-align: center;
+            width: 35px;
+            font-size: 18px;
+            display: inline-block;
+            background-color: getColor("orange");
+          }
+        }
+        .btn-muave {
+          margin-top: 20px;
+          border: 1px solid getColor("orange");
+          background-color: getColor("orange");
+        }
+      }
+    }
+    .right {
+      display: flex;
+      align-self: center;
+      align-items: center;
+      flex-direction: column;
+      .percent-circle {
+        align-items: center;
+        width: 120px;
+        height: 120px;
+      }
+      .movie-star {
+        margin-top: 10px;
+        img {
+          width: 25px;
+          height: 25px;
+        }
+      }
+    }
+  }
+  .movie-top-small-screen {
+    .movie-img-content {
+      position: relative;
+      max-height: 40vh;
+      .movie-img {
+        width: 100%;
+        max-height: 40vh;
+      }
+      .movie-rank {
+        top: 10px;
+        right: 10px;
+        padding: 2px 8px;
+        border-radius: 4px;
+        color: getColor("white");
+        position: absolute;
+        background-color: rgba(12, 27, 54, 0.8);
+        text-align: center;
+        .movie-point {
+          font-weight: 400;
+          font-size: 20px;
+          margin: 0;
+        }
+        .review-star {
+          margin-top: -12px;
+          width: 40px;
+          height: 25px;
+          img {
+            width: 8px;
+            height: 8px;
+          }
+        }
+      }
+      .movie-trailer {
+        position: absolute;
+        z-index: 100;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: transparent;
+        border: transparent;
+        box-shadow: none;
+        img {
+          width: 60px;
+          height: 60px;
+        }
+      }
+      .overlay-blur-effect {
+        position: absolute;
+        top: 0;
+        z-index: 10;
+        background: linear-gradient(to top, #0a2029, transparent 100%);
+        height: 100%;
+        width: 100%;
+      }
+    }
+    .movie-info {
+      margin-top: 10px;
+      margin-left: 20px;
+      p {
+        margin-bottom: 0;
+      }
+      .movie-showtime,
+      .movie-points {
+        color: getColor("grey");
+        size: 12px;
+      }
+      .movie-name {
+        color: white;
+        font-size: 25px;
+        font-weight: 600;
+      }
+    }
+  }
+  .movie-bottom {
+    padding-top: 30px;
+    color: getColor("white");
+    padding-bottom: 40px;
+    .tab-title.nav {
+      border: none;
+      display: flex;
+      justify-content: center;
+      .nav-item {
+        border: none;
+        color: getColor("white");
+        font-weight: bold;
+        font-size: 20px;
+        background-color: transparent;
+        margin: 0 20px;
+        transition: all 0.5s;
+        &.active {
+          color: getColor("orange");
+          transform: scale(1.5);
+        }
+        &:hover {
+          transform: scale(1.5);
+        }
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+    .lich-chieu-content {
+      margin-top: 20px;
+      .left {
+        border-right: 1.5px solid getColor("lightGrey");
+        .nav {
+          .nav-item {
+            .nav-link {
+              color: getColor("black");
+              background-color: transparent;
+              opacity: 0.3;
+              img {
+                width: 50px;
+              }
+              &.active {
+                opacity: 1;
+              }
+            }
+          }
+        }
+      }
+      .right {
+        .tab-content {
+          .tab-pane {
+            .nav.nav-tabs {
+              flex-wrap: nowrap;
+              overflow-y: hidden;
+              .nav-item.nav-link {
+                font-size: 20px;
+                color: getColor("black");
+                border: none;
+                &.active {
+                  color: getColor("orange");
+                }
+              }
+            }
+            .tab-content {
+              margin-top: 15px;
+              max-height: 465px;
+              overflow-x: hidden;
+              .rap-chieu-content {
+                .rap-chieu-info {
+                  .rap-chieu-name-img {
+                    display: flex;
+                    align-items: center;
+                    .rap-chieu-img {
+                      width: 50px;
+                      height: 50px;
+                    }
+                    .rap-chieu-ten {
+                      padding-left: 10px;
+                      margin: 0;
+                      font-size: 18px;
+                      font-weight: 600;
+                      span {
+                        color: getColor("orange");
+                      }
+                    }
+                  }
+                  .phim-version {
+                    margin: 0;
+                    font-weight: 600;
+                    margin-top: 10px;
+                  }
+                }
+                .rap-chieu-time {
+                  margin-top: 10px;
+                  button {
+                    border-radius: 10px;
+                    background-color: rgba(
+                      $color: getColor("lightGrey"),
+                      $alpha: 0.05
+                    );
+                    color: getColor("grey");
+                    border: 1.5px solid getColor("grey");
+                    span {
+                      font-size: 18px;
+                      font-weight: 500;
+                      color: green;
+                      transition: all 0.2s;
+                    }
+                    margin: 2px;
+                    &:hover {
+                      span {
+                        color: getColor("orange");
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .accordion {
+        .card-header {
+          display: flex;
+          align-items: center;
+          button {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            box-shadow: none;
+            color: black;
+            font-weight: bold;
+            img {
+              width: 50px;
+              height: 50px;
+            }
+          }
+        }
+        .card-body {
+          .nav {
+            display: flex;
+            flex-wrap: nowrap;
+            overflow-y: hidden;
+            .nav-item.nav-link {
+              color: black;
+              font-size: 14px;
+              @include Responsive(XS) {
+                font-size: 15px;
+              }
+              &.active {
+                font-weight: bold;
+                color: getColor("orange");
+              }
+            }
+          }
+          .tab-content {
+            .rap-chieu-info {
+              .rap-chieu-name-img {
+                display: flex;
+                align-items: center;
+                .rap-chieu-img {
+                  width: 50px;
+                  height: 50px;
+                }
+                .rap-chieu-ten {
+                  padding-left: 10px;
+                  margin: 0;
+                  font-size: 18px;
+                  font-weight: 600;
+                  span {
+                    color: getColor("orange");
+                  }
+                }
+              }
+              .phim-version {
+                margin: 0;
+                font-weight: 600;
+                margin-top: 10px;
+              }
+            }
+            .rap-chieu-time {
+              margin-top: 10px;
+              button {
+                font-size: 14px;
+                @include Responsive(XS) {
+                  font-size: 15px;
+                }
+                border-radius: 10px;
+                background-color: rgba(
+                  $color: getColor("lightGrey"),
+                  $alpha: 0.05
+                );
+                color: getColor("grey");
+                border: 1.5px solid getColor("grey");
+                span {
+                  font-size: 15px;
+                  @include Responsive(XS) {
+                    font-size: 18px;
+                  }
+                  font-weight: 500;
+                  color: green;
+                  transition: all 0.2s;
+                }
+                margin: 2px;
+                &:hover {
+                  span {
+                    color: getColor("orange");
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .thong-tin-content {
+      margin-top: 30px;
+      .left {
+        .thong-tin-item {
+          margin-bottom: 15px;
+          .thong-tin-head {
+            font-weight: 500;
+            font-size: 14px;
+          }
+          .thong-tin-info {
+            font-size: 12px;
+          }
+        }
+      }
+      .right {
+        .movie-info-head {
+          font-weight: 500;
+          font-size: 15px;
+        }
+        .movie-info-content {
+          text-align: justify;
+          font-size: 13.5px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,151 @@
+.phong-ve-screen {
+  @include Responsive(XS) {
+    background-color: rgba($color: getColor("orange"), $alpha: 0.5);
+  }
+  ::-webkit-scrollbar {
+    height: 10px;
+  }
+  header {
+    .navbar {
+      box-shadow: -3px 2.8px 2.2px rgba(0, 0, 0, 0.034),
+        -3px 6.7px 5.3px rgba(0, 0, 0, 0.048),
+        -3px 12.5px 10px rgba(0, 0, 0, 0.06),
+        -3px 22.3px 17.9px rgba(0, 0, 0, 0.072);
+    }
+  }
+  .left {
+    background-color: white;
+    .chon-ve {
+      .cinema-screen-simulator {
+        width: 850px;
+        margin: 30px auto;
+        .screen {
+          width: 90%;
+          margin: 0 auto;
+          border: 1px solid black;
+          background-color: black;
+          height: 15px;
+        }
+        p {
+          text-align: center;
+        }
+      }
+      overflow-x: auto;
+      .chon-ve-content {
+        margin: 0 auto;
+        width: 850px;
+        text-align: center;
+        button {
+          font-size: 12px;
+          width: 45px;
+          margin: 3px;
+        }
+      }
+    }
+    .chair-info {
+      width: 820px;
+      margin: 10px auto;
+      .btn-light {
+        position: relative;
+        span {
+          position: absolute;
+          top: -3.5px;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      }
+      button {
+        width: 10px;
+        height: 10px;
+        padding: 10px;
+        margin-right: 5px;
+      }
+      p {
+        margin: 0;
+      }
+    }
+  }
+  .right {
+    background-color: white;
+    margin: 0 auto;
+    width: 100%;
+    @include Responsive(XS) {
+      width: 60%;
+    }
+    @include Responsive(SM) {
+      width: 100%;
+    }
+    h4 {
+      margin-top: 15px;
+    }
+    overflow: hidden;
+    min-height: 100vh;
+    box-shadow: -3px 2.8px 2.2px rgba(0, 0, 0, 0.034),
+      -3px 6.7px 5.3px rgba(0, 0, 0, 0.048),
+      -3px 12.5px 10px rgba(0, 0, 0, 0.06),
+      -3px 22.3px 17.9px rgba(0, 0, 0, 0.072);
+    .cinema-info {
+      p {
+        span {
+          font-weight: bold;
+        }
+      }
+    }
+    .movie-info {
+      .movie-img {
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        i {
+          margin: 0 10px;
+          font-size: 40px;
+        }
+        img {
+          width: 100px;
+          height: 150px;
+        }
+      }
+    }
+    .buy-ticket-info {
+      .ghe-info {
+        p {
+          &:nth-child(1) {
+            text-align: center;
+            font-weight: bold;
+            margin-bottom: 3px;
+          }
+          &:nth-child(2) {
+            word-wrap: break-word;
+            max-height: 75px;
+            overflow-x: hidden;
+          }
+        }
+      }
+      .gia-tien-info {
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-weight: 600;
+        margin-top: 15px;
+        margin-right: 0px;
+        margin-bottom: 30px;
+        font-size: 18px;
+        @include Responsive(SM) {
+          margin-right: 20px;
+        }
+      }
+    }
+    .btn-muave {
+      position: absolute;
+      width: 100%;
+      left: 0;
+      font-weight: bold;
+      font-size: 30px;
+      bottom: 0;
+      height: 60px;
+      border-radius: 0;
+    }
+  }
+}

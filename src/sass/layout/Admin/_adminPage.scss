@@ -1,0 +1,11 @@
+.admin-page {
+  min-height: 100vh;
+  .admin-layout {
+    width: 100%;
+    background-color: #f8f9fc;
+    .admin-content {
+      min-height: 70%;
+      margin-top: 80px;
+    }
+  }
+}

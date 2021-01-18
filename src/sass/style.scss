@@ -1,0 +1,24 @@
+@import "./abstracts/variable";
+@import "./abstracts/function";
+@import "./abstracts/reponsive";
+
+@import "./base/reset";
+@import "./base/loading";
+@import "./base/movieTrailer";
+//Header
+@import "./layout/User/header";
+//Home
+@import "./pages/Home/home";
+@import "./pages/Home/detail";
+@import "./layout/User/Profile/profile";
+@import "./pages/Home/buyTicket";
+//Footer
+@import "./layout/User/footer";
+
+//Login
+@import "./pages/Login/login";
+
+//Admin
+@import "./pages/Admin/home";
+@import "./pages/Admin/userManager";
+@import "./pages/Admin/movieManager";

@@ -1,0 +1,38 @@
+.ticket-picker {
+  position: absolute;
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 10px;
+  width: 100%;
+  height: 80px;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  padding: 0 15px;
+  display: none;
+  z-index: 500;
+  @include Responsive(MD) {
+    display: flex;
+  }
+  .muave {
+    text-align: center;
+    padding: 0;
+  }
+  .ticket-picker__content {
+    align-items: center;
+
+    .ticket-picker__item {
+      border-right: 1px solid rgba(0, 0, 0, 0.3);
+      .form-group {
+        .form-control {
+          border: none;
+          box-shadow: none;
+        }
+      }
+    }
+  }
+}
