@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Redirect } from "react-router-dom";
-import { Tabs, Tab, Container } from "react-bootstrap";
+import { Tabs, Tab, Container, Spinner } from "react-bootstrap";
 import Swal from "sweetalert2";
 import { getThongTinNguoiDung } from "../../../redux/actions/nguoiDungActions";
 import UpdateProfile from "./UpdateProfile";
@@ -41,7 +41,11 @@ export default function Profile() {
   }, [data]);
 
   if (loading) {
-    return <p>Loading</p>;
+    return (
+      <div className="bg-dark" style={{ height: "79.5vh" }}>
+        <Spinner animation="border" variant="light" />
+      </div>
+    );
   }
 
   if (userInfo.length === 0) {

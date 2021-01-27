@@ -1,7 +1,15 @@
 import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useHistory, useParams, Redirect, Link } from "react-router-dom";
-import { Button, Navbar, Nav, Container, Row, Col } from "react-bootstrap";
+import {
+  Button,
+  Navbar,
+  Nav,
+  Container,
+  Row,
+  Col,
+  Spinner,
+} from "react-bootstrap";
 import { getPhongVe, postDatVe } from "../../../redux/actions/phongVeActions";
 import Swal from "sweetalert2";
 
@@ -28,7 +36,7 @@ export default function BuyTicket() {
         Swal.fire({
           icon: "success",
           title: "Mua vé",
-          text: "Mua vé thành công",
+          text: "Mua vé thành công, kiểm tra lại vé ở thông tin tài khoản",
         }).then((result) => {
           console.log(result);
           if (result.isConfirmed || result.isDismissed) {
@@ -43,7 +51,11 @@ export default function BuyTicket() {
   }, [dataDatVe]);
 
   if (loading) {
-    return <p>loading</p>;
+    return (
+      <div className="bg-dark" style={{ height: "100vh" }}>
+        <Spinner animation="border" variant="light" />
+      </div>
+    );
   }
   if (error) {
     return <p>Error</p>;
